@@ -10,6 +10,10 @@ public class Library {
         this.capacity = capacity;
     }
 
+    public Library() {
+
+    }
+
     public void addBook(Book book) {
         if (books.size() <capacity){
             this.books.add(book);
