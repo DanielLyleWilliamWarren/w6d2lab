@@ -18,4 +18,8 @@ public class Borrower {
         Book book = library.removeBook();
         this.loan.add(book);
     }
+
+    public void returnBook() {
+        this.loan.clear();
+    }
 }
