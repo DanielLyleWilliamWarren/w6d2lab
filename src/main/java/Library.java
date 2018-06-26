@@ -1,24 +1,23 @@
 import java.util.ArrayList;
 
 public class Library {
+    private int capacity;
+    private ArrayList<Book> books;
 
-    ArrayList<Book> book;
 
-    public Library(){
-        this.book = new ArrayList<>();
-
+    public Library(int capacity){
+        this.books = new ArrayList<>();
+        this.capacity = capacity;
     }
 
-
-
-
-
     public void addBook(Book book) {
-        this.book.add(book);
+        if (books.size() <capacity){
+            this.books.add(book);
+        }
     }
 
     public int bookCount() {
-        return this.book.size();
+        return this.books.size();
     }
 
 
