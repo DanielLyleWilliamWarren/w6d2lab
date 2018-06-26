@@ -19,4 +19,10 @@ public class BorrowerTest {
     public void noExistingLoan(){
         assertEquals(0, borrower.loanCount());
     }
+
+    @Test
+    public void canLoanBook(){
+        borrower.takeBookFromLibrary(library);
+        assertEquals(1, borrower.loanCount());
+    }
 }
